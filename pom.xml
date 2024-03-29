@@ -23,7 +23,12 @@
 		<artifactId>commons-codec</artifactId>
     <version>1.15</version>
 </dependency>
-
+<pluginRepositories>
+  <pluginRepository>
+    <id>pvsstudio-maven-repo</id>
+    <url>https://files.pvs-studio.com/java/pvsstudio-maven-repository/</url>
+  </pluginRepository>
+</pluginRepositories>
   </dependencies>
   <build>
     <finalName>iameter</finalName>
@@ -36,6 +41,18 @@
                   <target>17</target>
               </configuration>
           </plugin>
+	  <plugin>
+      <groupId>com.pvsstudio</groupId>
+      <artifactId>pvsstudio-maven-plugin</artifactId>
+      <version>7.29.79138</version>
+      <configuration>
+        <analyzer>
+          <outputType>text</outputType>
+          <outputFile>path/to/output.txt</outputFile>
+          <analysisMode>GA,OWASP</analysisMode>
+        </analyzer>
+      </configuration>
+    </plugin>
       </plugins>
   </build>
 </project>
