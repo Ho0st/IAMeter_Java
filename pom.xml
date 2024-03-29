@@ -23,16 +23,17 @@
 		<artifactId>commons-codec</artifactId>
     <version>1.15</version>
 </dependency>
-<pluginRepositories>
+
+  </dependencies>
+  <build>
+    <finalName>iameter</finalName>
+      <plugins>
+	  <pluginRepositories>
   <pluginRepository>
     <id>pvsstudio-maven-repo</id>
     <url>https://files.pvs-studio.com/java/pvsstudio-maven-repository/</url>
   </pluginRepository>
 </pluginRepositories>
-  </dependencies>
-  <build>
-    <finalName>iameter</finalName>
-      <plugins>
           <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-compiler-plugin</artifactId>
